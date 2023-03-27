@@ -1,0 +1,51 @@
+// Desktop version
+.error-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 6% 0;
+    h1 {
+        font-weight: 700;
+        font-size: 288px;
+        color: $colorpink;
+        margin: 0;
+        text-align: center;
+    }
+    h2, .btn-home {
+        color: $colorpink;
+        text-align: center;
+    }
+    .btn-home {
+        padding-top: 5%;
+        font-weight: 500;
+    }
+}
+
+
+// Mobile version
+@media (max-width:1000px) and (min-width:600px) {
+    .error-content {
+        h1 {
+            font-size: 200px;
+        }
+        h2 {
+            font-size: 28px;
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .error-content {
+        padding: 0% 8%;
+        h1 {
+            font-size: 96px;
+        }
+        h2 {
+            font-size: 18px;
+        }
+        .btn-home {
+            font-size: 14px;
+        }
+    }
+}

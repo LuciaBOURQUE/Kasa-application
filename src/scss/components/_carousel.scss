@@ -1,0 +1,55 @@
+// Desktop version
+.content-carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .picture, .active {
+        width: 100%;
+        height: 515px;
+        margin-bottom: 40px;
+        border-radius: 25px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+    .sliders {
+        color: $colorwhite;
+        position: absolute;
+        font-weight: 400;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        &__left {
+            cursor: pointer;
+            transform: rotate(180deg);
+        }
+        &__right {
+            cursor: pointer;
+        }
+    }
+}
+
+.number-image {
+    position: absolute;
+    top: 80%;
+    color: $colorwhite;
+}
+
+// Mobile version
+@media (max-width:600px) {
+    .content-carousel {
+        .picture, .active {
+            height: 255px;
+            margin-bottom: 20px;
+        }
+        .sliders {
+            font-weight: 200;
+            &__left, &__right {
+                width: 30px;
+            }
+        }
+        .number-image {
+            top: 70%;
+        }
+    }
+}

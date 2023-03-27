@@ -1,0 +1,21 @@
+// Desktop version
+.tag-list {
+  display: flex;
+}
+
+.tag {
+  width: fit-content;
+  border-radius: 10px;
+  background-color: $colorpink;
+  font-size: 14px;
+  color: $colorwhite;
+  padding: 4px 20px;
+  margin-right: 10px;
+}
+
+// Mobile version
+@media (max-width:600px) {
+  .tag {
+    font-size: 10px;
+  }
+}

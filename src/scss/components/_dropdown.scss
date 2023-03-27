@@ -1,0 +1,97 @@
+// Desktop version
+// Layout de la section About
+.content-about {
+    margin: 0 10%;
+    padding: 3%;
+}
+
+// Paramètres et animation du dropdown
+.dropdown {
+    padding-bottom: 2%;
+    &__title {
+        cursor: pointer;
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 5px;
+        background-color: $colorpink;
+        padding: 10px 20px;
+        label {
+            color: $colorwhite;
+            font-size: 24px;
+        }
+        .arrowdropdown {
+            transform: rotate(0deg);
+            transition: transform 0.8s ease-in-out;
+        }
+        .arrowdropdown.active {
+            transform: rotate(-180deg);
+            transition: transform 0.8s ease-in-out;
+        }
+    }
+    .text {
+        max-height: 0;
+        overflow: hidden;
+        border-radius: 0 0 5px 5px;
+        background-color: $colorgrey;
+        transition: all 0.8s cubic-bezier(0, 1, 0, 1);
+    }
+    .text.active {
+        height: auto;
+        max-height: 9999px;
+        transition: all 0.8s cubic-bezier(1, 0, 1, 0);
+    }
+}
+
+.text p {
+    margin:0;
+    color: $colorpink;
+    font-size: 24px;
+    padding: 25px 25px 20px 20px;
+}
+
+// Partie pour les dropdown liste
+.text ul {
+    list-style-type: none;
+    padding: 0 20px;
+    li {
+        color: $colorpink;
+        font-size: 24px;
+        font-weight: 400;
+    }
+}
+
+
+// Mobile version
+@media (max-width:1000px) {
+    .dropdown__title label {
+        font-size: 20px;
+    }
+    .text p, .text.active li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width:600px) {
+    .content-about {
+        margin: 0;
+        padding: 4%;
+    }
+    .dropdown__title label {
+        font-size: 13px;
+    }
+    .arrowdropdown {
+        height: 10px;
+    }
+    .text p, .text.active li  {
+        font-size: 12px;
+    }
+    .text p {
+        padding: 20px;
+    }
+    .text ul {
+        margin:0;
+        padding: 20px;
+    }
+}
