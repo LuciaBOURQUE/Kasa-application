@@ -508,6 +508,10 @@ footer p {
     display: flex;
     justify-content: flex-end;
   }
+  .content-info .note-profil .profil__picture {
+    width: 45px;
+    height: 45px;
+  }
   .content-info .note-profil .rating {
     position: absolute;
     top: 20px;
